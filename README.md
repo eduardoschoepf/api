@@ -1,4 +1,5 @@
-# JavaSpring
+# Java Spring API  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Spring Core
 Esse componente é a base do ecossistema do Spring.  
