@@ -1,18 +1,40 @@
-# Java Spring API  
+# Employee Management API
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Spring Core
-Esse componente é a base do ecossistema do Spring.  
-Ele contém o “contêiner principal” (que permite a injeção de dependência), mas também contém o Spring MVC, que permite o desenvolvimento na Web, e o Data Access, que fornece elementos fundamentais para a comunicação com bancos de dados.  
+## Description
+This project is a Spring Boot application for managing employees. It allows adding, updating, deleting, and retrieving employees via a REST API. The data is stored in an in-memory H2 database.
 
-## Spring Data
-Esse componente pode se comunicar com muitos tipos de banco de dados. Por exemplo, ele oferece a capacidade de se comunicar com um banco de dados implementando apenas interfaces, graças às convenções de nomenclatura.  
+## Metadata
+- **Group**: com.eduardoschoepf
+- **Artifact**: api
 
-## Spring Security
-Esse componente é um dos mais importantes da estrutura do Spring, embora também seja um dos mais complexos. Ele gerencia a autenticação, a autorização e a segurança da API.  
+## Features
+- **Add Employee**: Create a new employee.
+- **Update Employee**: Update an existing employee's information.
+- **Delete Employee**: Remove an employee.
+- **Retrieve Employees**: Get details of all employees or a specific employee.
 
-## Spring Cloud
-A arquitetura de microsserviços é atualmente um modelo de arquitetura muito popular. E para atender às restrições dessa arquitetura de software, o Spring Framework fornece o Spring Cloud. 
+## Dependencies
+The main dependencies used in this project are:
+- **Spring Web**: For building the REST API.
+- **Lombok**: To reduce boilerplate code (getters, setters, constructors, etc.).
+- **H2 Database**: For a lightweight, in-memory database.
+- **Spring Data JPA**: To simplify database interactions.
 
-## Spring Boot
-Essa ferramenta acelera e simplifica o desenvolvimento de aplicativos da Web e microsserviços.
+The application will be available at `http://localhost:9000`.
+
+## API Usage
+Here are the main API endpoints:
+
+- **GET /employees**: Retrieves the list of all employees.
+- **GET /employee/{id}**: Retrieves details of an employee by ID.
+- **DELETE /employee/{id}**: Deletes an employee by ID.
+
+## H2 Database Configuration
+The H2 database is configured to run in memory. You can access the H2 console at `http://localhost:8080/h2-console` with the following details:
+- **JDBC URL**: `jdbc:h2:mem:employees`
+- **Username**: `sa`
+- **Password**: (leave blank)
+
+## Lombok
+Lombok is used to automatically generate getter, setter, and other useful methods in the entities. Make sure to have the Lombok plugin installed in your IDE to avoid compilation errors.
