@@ -1,14 +1,15 @@
 package com.eduardoschoepf.api.service;
 
+
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
-import lombok.Data;
-
 import com.eduardoschoepf.api.model.Employee;
 import com.eduardoschoepf.api.repository.EmployeeRepository;
+
+import lombok.Data;
 
 @Data
 @Service
