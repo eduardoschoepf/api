@@ -10,23 +10,23 @@ import java.io.Serializable;
 
 import lombok.Data;
 
-@Data                                                   // Est une annotation Lombok, la librairie s’en charge d’ajouter les getters et les setters 
-@Entity                                                 // Est une annotation qui indique que la classe correspond à une table de la base de données
-@Table(name = "employees")                              // Indique le nom de la table associée
+@Data                                                   // This is a Lombok annotation; the library takes care of adding getters and setters
+@Entity                                                 // This annotation indicates that the class corresponds to a database table
+@Table(name = "employees")                            // Specifies the name of the associated table
 public class Employee implements Serializable {
 
-    @Id                                                 // L’attribut id correspond à la clé primaire de la table, et est donc annoté @Id
-    @GeneratedValue(strategy = GenerationType.AUTO) // Comme l’id est auto-incrémenté, j’ai ajouté l’annotation @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id                                                 // The id attribute corresponds to the primary key of the table and is thus annotated with @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)     // Since the id is auto-incremented, I added the @GeneratedValue(strategy = GenerationType.IDENTITY) annotation
     private Long id;
 
-    @Column(name="first_name")                          // L'annotation @Column pour faire le lien avec le nom du champ de la table
+    @Column(name="first_name")                          // The @Column annotation is used to map to the table's field name
     private String firstName;
 
-    @Column(name="last_name")                           // L'annotation @Column pour faire le lien avec le nom du champ de la table
+    @Column(name="last_name")                           // The @Column annotation is used to map to the table's field name
     private String lastName;
 
-    private String mail;                                // Pas besoin de mettre l'annotation @Column pour mail car le nom du champ de la table est identique
+    private String mail;                                // No need to use the @Column annotation for mail because the field name is identical to the table's column name
 
-    private String password;                            // Pas besoin de mettre l'annotation @Column pour password car le nom du champ de la table est identique
+    private String password;                            // No need to use the @Column annotation for password because the field name is identical to the table's column name
 
 }
